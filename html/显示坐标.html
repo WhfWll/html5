@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示坐标</title>
+<script type="text/javascript">
+	function get_zuobiao(e){
+		x = e.clientX;
+		y = e.clientY;
+		document.getElementById("div2").innerHTML="Coordinates:("+x+","+y+")";
+	}
+	function clear_zuobiao (){
+		document.getElementById("div2").innerHTML=""
+	}
+</script>
+</head>
+
+<body>
+<p>把鼠标放在上面会显示坐标：</p>
+<div id="div1" style="border:1px solid; width:800px;height:400px" onMouseMove="get_zuobiao(event)" 
+onMouseOut="clear_zuobiao()"></div>
+<br>
+<br>
+<br>
+<div id="div2"></div>
+</body>
+</html>
